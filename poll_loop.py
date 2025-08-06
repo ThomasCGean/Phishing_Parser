@@ -1,6 +1,6 @@
 # poll_loop.py
 
-import schedule
+import schedule # pyright: ignore[reportMissingImports]
 import time
 from main import main
 
