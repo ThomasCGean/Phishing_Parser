@@ -2,7 +2,8 @@
 
 import smtplib
 from email.message import EmailMessage
-from config import EMAIL_ADDRESS, EMAIL_PASSWORD
+from config_loader import load_config
+config = load_config()
 
 def send_quarantine_alert(subject: str, confidence: float):
     """
@@ -11,8 +12,8 @@ def send_quarantine_alert(subject: str, confidence: float):
     try:
         msg = EmailMessage()
         msg["Subject"] = "⚠️ Phishing Email Quarantined"
-        msg["From"] = EMAIL_ADDRESS
-        msg["To"] = EMAIL_ADDRESS  # self-send
+        msg["From"] = config.EMAIL_ADDRESS
+        msg["To"] = config.EMAIL_ADDRESS  # self-send
 
         msg.set_content(f"""
 A new phishing email was detected and quarantined.
@@ -26,7 +27,7 @@ You can review it in your 'Phishing' folder.
         """)
 
         with smtplib.SMTP_SSL("smtp.gmail.com", 465) as smtp:
-            smtp.login(EMAIL_ADDRESS, EMAIL_PASSWORD)
+            smtp.login(config.EMAIL_ADDRESS, config.EMAIL_PASSWORD)
             smtp.send_message(msg)
         print("📧 Notification email sent.")
     except Exception as e:

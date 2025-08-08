@@ -2,10 +2,11 @@
 
 import torch
 from transformers import DistilBertTokenizerFast, DistilBertForSequenceClassification
-from config import MODEL_DIR, CONFIDENCE_THRESHOLD
+from config_loader import load_config
+config = load_config()
 
 class PhishingEmailClassifier:
-    def __init__(self, model_dir: str = MODEL_DIR, threshold: float = CONFIDENCE_THRESHOLD):
+    def __init__(self, model_dir: str = config.MODEL_DIR, threshold: float = config.CONFIDENCE_THRESHOLD):
         self.device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
         self.tokenizer = DistilBertTokenizerFast.from_pretrained(model_dir)
         self.model = DistilBertForSequenceClassification.from_pretrained(model_dir)
