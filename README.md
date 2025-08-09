@@ -1,7 +1,7 @@
 # RedPhish – AI-Powered Email Phishing Detection Tool
 
-RedPhish is a proof-of-concept phishing email detection tool that uses a fine-tuned **DistilBERT** model to classify incoming emails as **phishing** or **legitimate**.  
-Suspicious emails are automatically quarantined, and optional email notifications can be sent to alert the user.
+RedPhish is a proof-of-concept phishing email detection tool that uses a fine-tuned **DistilBERT** model to classify incoming emails as **phishing** or **legitimate**.
+Suspicious emails are automatically quarantined, with email notifications alerting users to any detected phishing emails.
 
 ---
 
