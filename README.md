@@ -62,10 +62,17 @@ Fill out your email information in user_config.py, then activate activate.py:
 python activate.py
 
 This will:
+
     -Connect to Gmail
+
     -Retrieve recent emails
+
     -Preprocess subject and body
+
     -Run model inference
+
     -Move suspected phishing emails to quarantine
+
     -Send notifications (if an email is quarantined)
+
     -Keep running until stopped
