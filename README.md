@@ -61,18 +61,18 @@ Place any DistilBERT model of your choice into the folder models/distilBERT_phis
 Fill out your email information in user_config.py, then activate activate.py: 
 python activate.py
 
-This will:
+Once activated, RedPhish will:
 
-    -Connect to Gmail
+-Connect to Gmail
 
-    -Retrieve recent emails
+-Retrieve recent emails
 
-    -Preprocess subject and body
+-Preprocess subject and body
 
-    -Run model inference
+-Run model inference
 
-    -Move suspected phishing emails to quarantine
+-Move suspected phishing emails to quarantine
 
-    -Send notifications (if an email is quarantined)
+-Send notifications (if an email is quarantined)
 
-    -Keep running until stopped
+-Keep running until stopped
