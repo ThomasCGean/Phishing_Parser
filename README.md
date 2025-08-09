@@ -17,18 +17,27 @@ Suspicious emails are automatically quarantined, and optional email notification
 ## 📂 Project Structure
 
 redphish/
-│
-├── main.py # Entry point – pulls emails, runs model inference, quarantines as needed
-├── activate.py # Single script to make RedPhish run with the current user_config settings
-├── email_reader.py # Handles connecting to and retrieving emails from Gmail
-├── preprocess.py # Cleans email subject/body text for model compatibility
-├── inference.py # Loads trained DistilBERT model and runs predictions
-├── quarantine.py # Moves suspicious emails to quarantine folder
-├── notifier.py # Sends user notifications for quarantined emails
-├── config_loader.py # Loads config from config.py or example_config.py
-├── user_config.py # Template for configuration
-├── requirements.txt # Python dependencies
-└── models/distilbert_phishing/best # Trained model files, detection engine goes here
+ main.py # Entry point – pulls emails, runs model inference, quarantines as needed
+
+ activate.py # Single script to make RedPhish run with the current user_config settings
+
+ email_reader.py # Handles connecting to and retrieving emails from Gmail
+
+ preprocess.py # Cleans email subject/body text for model compatibility
+
+ inference.py # Loads trained DistilBERT model and runs predictions
+
+ quarantine.py # Moves suspicious emails to quarantine folder
+
+ notifier.py # Sends user notifications for quarantined emails
+
+ config_loader.py # Loads config from config.py or user_config.py
+
+ user_config.py # Template for configuration
+
+ requirements.txt # Python dependencies
+
+ models/distilbert_phishing/best # Trained model files/detection engine goes here
 
 TO WORK WITH GMAIL:
 
