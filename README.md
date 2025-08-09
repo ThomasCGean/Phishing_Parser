@@ -17,6 +17,7 @@ Suspicious emails are automatically quarantined, and optional email notification
 ## 📂 Project Structure
 
 redphish/
+
  main.py # Entry point – pulls emails, runs model inference, quarantines as needed
 
  activate.py # Single script to make RedPhish run with the current user_config settings
@@ -61,17 +62,10 @@ Fill out your email information in user_config.py, then activate activate.py:
 python activate.py
 
 This will:
-
     -Connect to Gmail
-
     -Retrieve recent emails
-
     -Preprocess subject and body
-
     -Run model inference
-
     -Move suspected phishing emails to quarantine
-
     -Send notifications (if an email is quarantined)
-
     -Keep running until stopped
